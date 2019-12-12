@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t bnprashanth/poc-docker-kubernetes -f Dockerfile.dev .
+
+script:
+  - docker run bnprashanth/poc-docker-kubernetes npm run test -- --coverage
