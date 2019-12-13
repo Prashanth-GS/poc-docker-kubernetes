@@ -8,14 +8,14 @@ before_install:
 script:
   - docker run -e CI=true bnprashanth/poc-docker-kubernetes npm run test -- --coverage
 
-deploy:
-  provider: elasticbeanstalk
-  region: "my region"
-  app: "my app name"
-  env: "my environment"
-  bucket_name: "my app name"
-  on:
-    branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: "$AWS_SECRET_KEY"
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "my region"
+#   app: "my app name"
+#   env: "my environment"
+#   bucket_name: "my app name"
+#   on:
+#     branch: master
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key:
+#     secure: "$AWS_SECRET_KEY"
