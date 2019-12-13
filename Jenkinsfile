@@ -1,7 +1,7 @@
 node {
 
-    stage 'Cloning Repo'
-        sh "git clone https://github.com/Prashanth-GS/poc-docker-kubernetes"
+    stage 'Checkout'
+        checkout scm
 
     stage 'Building the image'
         sh "docker build -t bnprashanth/poc-docker-kubernetes -f poc-docker-kubernetes/Dockerfile.dev ."
