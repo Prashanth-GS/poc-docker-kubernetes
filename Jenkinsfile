@@ -1,7 +1,5 @@
 node('docker') {
- 
-    stage 'Checkout'
-        checkout scm
+
     stage 'Building the image'
         sh "docker build -t bnprashanth/poc-docker-kubernetes -f Dockerfile.dev ."
   
